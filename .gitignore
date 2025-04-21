@@ -1,0 +1,4 @@
+.DS_Store
+node_modules/
+repomix*
+.lifx-api-mcp-server*.json*

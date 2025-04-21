@@ -1,0 +1,59 @@
+{
+  "name": "lifx-api-mcp-server",
+  "version": "0.1.0",
+  "author": "James Furey (https://about.me/jamesfurey)",
+  "description": "MCP Server for LIFX Devices via HTTP API",
+  "license": "MIT",
+  "type": "module",
+  "main": "lifx-api-mcp-server.js",
+  "bin": {
+    "lifx-api-mcp-server": "lifx-api-mcp-server.js"
+  },
+  "files": [
+    "lifx-api-mcp-server.js",
+    "config-create.js",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node lifx-api-mcp-server.js",
+    "start:verbose": "cross-env CONFIG_LOG_LEVEL=verbose node lifx-api-mcp-server.js",
+    "start:debug": "node --inspect lifx-api-mcp-server.js",
+    "config:create": "node config-create.js",
+    "docker:local:build": "docker build -t lifx-mcp-server .",
+    "docker:local:run": "docker run --rm -i --network=host lifx-mcp-server",
+    "docker:local:run:config": "docker run --rm -i --network=host -v ~/.lifx-api-mcp-server.jsonc:/root/.lifx-api-mcp-server.jsonc:ro lifx-mcp-server",
+    "docker:hub:run": "docker run --rm -i --network=host --pull always furey/lifx-api-mcp-server",
+    "docker:hub:run:config": "docker run --rm -i --network=host -v ~/.lifx-api-mcp-server.jsonc:/root/.lifx-api-mcp-server.jsonc:ro --pull always furey/lifx-api-mcp-server"
+  },
+  "keywords": [
+    "ai",
+    "llm",
+    "mcp",
+    "claude",
+    "lifx",
+    "smart-home",
+    "iot",
+    "lighting",
+    "model-context-protocol"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.8.0",
+    "cross-env": "^7.0.3",
+    "lodash": "^4.17.21",
+    "strip-json-comments": "^5.0.1",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {},
+  "volta": {
+    "node": "18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/furey/lifx-api-mcp-server.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
