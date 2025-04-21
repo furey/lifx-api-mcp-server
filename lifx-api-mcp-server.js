@@ -15,7 +15,7 @@ const __dirname = dirname(__filename)
 const LIFX_API_BASE_URL = 'https://api.lifx.com/v1'
 
 const start = async (cliApiToken) => {
-  log(`LIFX HTTP API MCP Server v${getPackageVersion()} starting…`, true)
+  log(`LIFX API MCP Server v${getPackageVersion()} starting…`, true)
 
   config = loadConfig()
 
@@ -28,7 +28,7 @@ const start = async (cliApiToken) => {
 
   log('Initializing MCP server…')
   server = new McpServer({
-    name: 'LIFX HTTP API MCP Server',
+    name: 'LIFX API MCP Server',
     version: getPackageVersion(),
     description: 'MCP server for controlling LIFX devices via the HTTP API',
     homepage: 'https://github.com/furey/lifx-api-mcp-server', // Placeholder URL
@@ -63,7 +63,7 @@ const start = async (cliApiToken) => {
   log('Connecting MCP server transport…')
   await server.connect(transport)
 
-  log('LIFX HTTP API MCP Server running.', true)
+  log('LIFX API MCP Server running.', true)
   return true
 }
 

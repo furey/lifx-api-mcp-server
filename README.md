@@ -1,11 +1,11 @@
-# LIFX HTTP API MCP Server
+# LIFX API MCP Server
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 [![Docker Hub Version](https://img.shields.io/docker/v/furey/lifx-api-mcp-server)](https://hub.docker.com/r/furey/lifx-api-mcp-server) <!-- Placeholder -->
 [![NPM Version](https://img.shields.io/npm/v/lifx-api-mcp-server)](https://www.npmjs.com/package/lifx-api-mcp-server) <!-- Placeholder -->
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-donate-orange.svg)](https://www.buymeacoffee.com/furey) <!-- Optional -->
 
-**LIFX HTTP API MCP Server** is a local Model Context Protocol (MCP) server providing access to LIFX devices using natural language via LLMs to perform actions like listing lights, setting states, activating scenes, and triggering effects through the LIFX HTTP API. Includes contextual resources and helpful prompts.
+**LIFX API MCP Server** is a local Model Context Protocol (MCP) server providing access to LIFX devices using natural language via LLMs to perform actions like listing lights, setting states, activating scenes, and triggering effects through the LIFX HTTP API. Includes contextual resources and helpful prompts.
 
 ## Contents
 
@@ -194,7 +194,7 @@ docker run --rm -i --network=host \
 When the server starts successfully, you should see output like:
 
 ```
-[LIFX MCP] LIFX HTTP API MCP Server vX.Y.Z starting…
+[LIFX MCP] LIFX API MCP Server vX.Y.Z starting…
 [LIFX MCP] Loading config file: /path/to/.lifx-api-mcp-server.jsonc (or 'No config file found')
 [LIFX MCP] Initializing MCP server…
 [LIFX MCP] Registering MCP resources…
@@ -205,7 +205,7 @@ When the server starts successfully, you should see output like:
 [LIFX MCP] Total MCP tools registered: Z
 [LIFX MCP] Creating stdio transport…
 [LIFX MCP] Connecting MCP server transport…
-[LIFX MCP] LIFX HTTP API MCP Server running.
+[LIFX MCP] LIFX API MCP Server running.
 ```
 
 ## Configuration
